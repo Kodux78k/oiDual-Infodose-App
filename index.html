@@ -8,7 +8,18 @@
 <link href="manifest.json" rel="manifest"/>
 <meta content="#000000" name="theme-color"/>
 <link href="assets/icons/icon-192.png" rel="icon" type="image/png"/>
-<style>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log('Service Worker Registered'));
+  }
+</script>
+    
+    <style>
     /* ——— SEU CSS INTEGRAL (ajustes) ——— */
     :root {
       --bg: linear-gradient(to bottom, #000, #1a1a1a);
